@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
-    <h1 class="h3 mb-3 font-weight-normal">Chat Chat</h1>
+    <h1 class="h3 mb-3 font-weight-normal">Chat Chot</h1>
     <div id="chat-window">
         <div id="output"></div>
         <div id="typing"></div>
@@ -23,8 +23,28 @@
         
         <button id="button" class="btn btn-lg btn-primary btn-block" type="submit">Send</button>
     </div>
+
+    <hr>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm col-md-6 col-lg-6">
+                remote
+                <video id="rVideo" autoplay="autplay"></video>
+            </div>
+            <div class="col-sm col-md-6 col-lg-6">
+                local
+                <video id="lVideo" autoplay="autplay" muted></video>
+            </div>
+        </div>
+        <span id="displayId"></span>
+        <input type="text" id="connId" class="form-control" placeholder="Enter a connection id" required>
+        <button id="conn_button" class="btn btn-lg btn-success btn-block" type="submit">Connect</button>
+        <button id="call_button" class="btn btn-lg btn-danger btn-block" type="submit">Call</button>
+    </div>
     
     <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
     <script src="/client.js" async defer></script>
 </body>
 </html>
