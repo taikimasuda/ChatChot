@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <h1 class="h3 mb-3 font-weight-normal">Chat Chat</h1>
+    <div id="chat-window">
+        <div id="output"></div>
+        <div id="typing"></div>
+    </div>
+
+    
+    <div class="container">  
+        <input type="text" id="handle" class="form-control" placeholder="name" required autofocus> 
+        
+        <input type="text" id="message" class="form-control" placeholder="Enter a message" required> 
+        
+        <button id="button" class="btn btn-lg btn-primary btn-block" type="submit">Send</button>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js" async defer></script>
+</body>
+</html>
